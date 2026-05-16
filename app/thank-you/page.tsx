@@ -35,8 +35,12 @@ export default function ThankYouPage() {
             />
           </div>
 
-          <h1 className="mt-6 text-center font-display text-4xl leading-[1.1] tracking-tight text-primary md:mt-8 md:text-5xl">
-            You&rsquo;re all set, John
+          <h1 className="mt-6 text-balance text-center font-display text-4xl leading-[1.05] tracking-tight text-primary md:mt-8 md:text-6xl">
+            You&rsquo;re{" "}
+            <span className="font-editorial italic font-normal text-accent">
+              all set
+            </span>
+            , John
           </h1>
 
           <p className="mt-3 max-w-md text-center text-sm text-foreground/65 md:text-base">
@@ -71,7 +75,7 @@ export default function ThankYouPage() {
                   <span className="text-sm font-medium text-foreground/70">
                     Total
                   </span>
-                  <span className="font-display text-2xl font-semibold text-primary md:text-3xl">
+                  <span className="font-editorial text-4xl italic text-primary md:text-5xl">
                     $147
                   </span>
                 </div>

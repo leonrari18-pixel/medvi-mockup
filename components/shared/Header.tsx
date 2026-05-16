@@ -7,8 +7,12 @@ export function Header() {
         <Link
           href="/"
           aria-label="MEDVI home"
-          className="font-display text-xl uppercase tracking-[0.28em] text-primary md:text-2xl"
+          className="group inline-flex items-center gap-2 font-display text-xl uppercase tracking-[0.28em] text-primary md:text-2xl"
         >
+          <span
+            aria-hidden
+            className="size-1.5 rounded-full bg-accent transition-transform group-hover:scale-125"
+          />
           MEDVI
         </Link>
 

@@ -27,8 +27,12 @@ export default function QuizPage() {
             Step 3 of 8
           </p>
 
-          <h1 className="mt-3 font-display text-3xl leading-[1.15] tracking-tight text-primary md:text-4xl lg:text-5xl">
-            How often do you experience symptoms?
+          <h1 className="mt-3 text-balance font-display text-4xl leading-[1.1] tracking-tight text-primary md:text-5xl lg:text-6xl">
+            How{" "}
+            <span className="font-editorial italic font-normal text-accent">
+              often
+            </span>{" "}
+            do you experience symptoms?
           </h1>
 
           <RadioGroup

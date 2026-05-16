@@ -19,8 +19,12 @@ export default function Upsell2Page() {
       countdown="09:47"
     >
       <div className="flex flex-col items-center text-center">
-        <h1 className="font-display text-3xl leading-[1.1] tracking-tight text-primary sm:text-4xl md:text-5xl">
-          Add our Sleep Stack — customers see 2x better results
+        <h1 className="text-balance font-display text-4xl leading-[1.05] tracking-tight text-primary sm:text-5xl md:text-6xl">
+          Add our Sleep Stack — customers see{" "}
+          <span className="font-editorial italic font-normal text-accent">
+            2x
+          </span>{" "}
+          better results
         </h1>
 
         <div className="mt-8 w-full max-w-sm overflow-hidden rounded-2xl bg-card shadow-md ring-1 ring-foreground/10 md:mt-10">
@@ -47,13 +51,13 @@ export default function Upsell2Page() {
         </ul>
 
         <div className="mt-8 flex items-baseline justify-center gap-3 md:mt-10">
-          <span className="text-lg text-foreground/40 line-through md:text-xl">
+          <span className="font-editorial text-2xl italic text-foreground/40 line-through md:text-3xl">
             $79
           </span>
-          <span className="font-display text-3xl font-bold text-accent md:text-4xl">
+          <span className="font-editorial text-5xl italic text-accent md:text-6xl">
             $39
           </span>
-          <span className="text-sm font-medium uppercase tracking-wide text-accent md:text-base">
+          <span className="text-xs font-medium uppercase tracking-[0.18em] text-accent md:text-sm">
             today
           </span>
         </div>

@@ -42,8 +42,11 @@ export default function CheckoutPage() {
       <main className="flex-1 px-4 py-10 md:px-6 md:py-16">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8 md:mb-12">
-            <h1 className="font-display text-3xl leading-tight tracking-tight text-primary md:text-4xl">
-              Checkout
+            <h1 className="font-display text-4xl leading-tight tracking-tight text-primary md:text-5xl">
+              <span className="font-editorial italic font-normal text-accent">
+                Almost
+              </span>{" "}
+              there
             </h1>
             <p className="mt-2 text-sm text-foreground/65 md:text-base">
               Enter your details to finish your order.
@@ -192,7 +195,7 @@ export default function CheckoutPage() {
                       <span className="text-sm font-medium text-foreground/70">
                         Total
                       </span>
-                      <span className="font-display text-2xl font-semibold text-primary md:text-3xl">
+                      <span className="font-editorial text-4xl italic text-primary md:text-5xl">
                         $89.00
                       </span>
                     </div>

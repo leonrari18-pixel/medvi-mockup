@@ -10,8 +10,11 @@ export default function Downsell1Page() {
       countdown="09:47"
     >
       <div className="flex flex-col items-center text-center">
-        <h1 className="font-display text-3xl leading-[1.1] tracking-tight text-primary sm:text-4xl md:text-5xl">
-          Wait — try the travel size for $9 instead
+        <h1 className="text-balance font-display text-4xl leading-[1.05] tracking-tight text-primary sm:text-5xl md:text-6xl">
+          <span className="font-editorial italic font-normal text-accent">
+            Wait
+          </span>{" "}
+          — try the travel size for $9 instead
         </h1>
 
         <div className="mt-8 w-full max-w-[260px] overflow-hidden rounded-2xl bg-card shadow-md ring-1 ring-foreground/10 md:mt-10 md:max-w-xs">
@@ -28,10 +31,10 @@ export default function Downsell1Page() {
         </p>
 
         <div className="mt-6 flex items-baseline justify-center gap-2 md:mt-8">
-          <span className="font-display text-3xl font-bold text-accent md:text-4xl">
+          <span className="font-editorial text-5xl italic text-accent md:text-6xl">
             $9
           </span>
-          <span className="text-sm font-medium uppercase tracking-wide text-accent md:text-base">
+          <span className="text-xs font-medium uppercase tracking-[0.18em] text-accent md:text-sm">
             one-time
           </span>
         </div>
