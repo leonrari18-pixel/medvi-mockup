@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter, Instrument_Serif } from "next/font/google";
+import {
+  Fraunces,
+  Geist,
+  Geist_Mono,
+  Instrument_Serif,
+} from "next/font/google";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -8,8 +13,14 @@ const fraunces = Fraunces({
   display: "swap",
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const geist = Geist({
+  variable: "--font-geist",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
 });
@@ -35,9 +46,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${inter.variable} ${instrumentSerif.variable} h-full antialiased`}
+      className={`${fraunces.variable} ${geist.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
-      <body className={`${fraunces.variable} ${inter.variable} ${instrumentSerif.variable} min-h-full flex flex-col`}>
+      <body className={`${fraunces.variable} ${geist.variable} ${geistMono.variable} ${instrumentSerif.variable} min-h-full flex flex-col`}>
         {children}
       </body>
     </html>

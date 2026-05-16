@@ -1,5 +1,6 @@
-import Link from "next/link";
-
+import { MagneticCTA } from "@/components/motion/MagneticCTA";
+import { Reveal } from "@/components/motion/Reveal";
+import { Stagger, StaggerItem } from "@/components/motion/Stagger";
 import { Footer } from "@/components/shared/Footer";
 import { Header } from "@/components/shared/Header";
 import { buttonVariants } from "@/components/ui/button";
@@ -64,69 +65,80 @@ export default function CheckoutPage() {
                   Sent in plain, unbranded packaging.
                 </p>
 
-                <div className="mt-5 flex flex-col gap-4">
-                  <Field id="name" label="Full name">
-                    <Input
-                      id="name"
-                      name="name"
-                      autoComplete="name"
-                      placeholder="John Carter"
-                      className={inputClass}
-                    />
-                  </Field>
-
-                  <Field id="address" label="Address line 1">
-                    <Input
-                      id="address"
-                      name="address"
-                      autoComplete="address-line1"
-                      placeholder="221B Baker Street"
-                      className={inputClass}
-                    />
-                  </Field>
-
-                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-[1fr_120px_140px]">
-                    <Field id="city" label="City">
+                <Stagger
+                  stagger={0.07}
+                  className="mt-5 flex flex-col gap-4"
+                >
+                  <StaggerItem>
+                    <Field id="name" label="Full name">
                       <Input
-                        id="city"
-                        name="city"
-                        autoComplete="address-level2"
-                        placeholder="Brooklyn"
+                        id="name"
+                        name="name"
+                        autoComplete="name"
+                        placeholder="John Carter"
                         className={inputClass}
                       />
                     </Field>
-                    <Field id="state" label="State">
-                      <Input
-                        id="state"
-                        name="state"
-                        autoComplete="address-level1"
-                        placeholder="NY"
-                        className={inputClass}
-                      />
-                    </Field>
-                    <Field id="zip" label="Zip">
-                      <Input
-                        id="zip"
-                        name="zip"
-                        inputMode="numeric"
-                        autoComplete="postal-code"
-                        placeholder="11201"
-                        className={inputClass}
-                      />
-                    </Field>
-                  </div>
+                  </StaggerItem>
 
-                  <Field id="email" label="Email">
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      autoComplete="email"
-                      placeholder="you@example.com"
-                      className={inputClass}
-                    />
-                  </Field>
-                </div>
+                  <StaggerItem>
+                    <Field id="address" label="Address line 1">
+                      <Input
+                        id="address"
+                        name="address"
+                        autoComplete="address-line1"
+                        placeholder="221B Baker Street"
+                        className={inputClass}
+                      />
+                    </Field>
+                  </StaggerItem>
+
+                  <StaggerItem>
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-[1fr_120px_140px]">
+                      <Field id="city" label="City">
+                        <Input
+                          id="city"
+                          name="city"
+                          autoComplete="address-level2"
+                          placeholder="Brooklyn"
+                          className={inputClass}
+                        />
+                      </Field>
+                      <Field id="state" label="State">
+                        <Input
+                          id="state"
+                          name="state"
+                          autoComplete="address-level1"
+                          placeholder="NY"
+                          className={inputClass}
+                        />
+                      </Field>
+                      <Field id="zip" label="Zip">
+                        <Input
+                          id="zip"
+                          name="zip"
+                          inputMode="numeric"
+                          autoComplete="postal-code"
+                          placeholder="11201"
+                          className={inputClass}
+                        />
+                      </Field>
+                    </div>
+                  </StaggerItem>
+
+                  <StaggerItem>
+                    <Field id="email" label="Email">
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        autoComplete="email"
+                        placeholder="you@example.com"
+                        className={inputClass}
+                      />
+                    </Field>
+                  </StaggerItem>
+                </Stagger>
               </section>
 
               <section>
@@ -142,22 +154,38 @@ export default function CheckoutPage() {
                     id="card"
                     role="group"
                     aria-label="Card number ending in 4242"
-                    className="flex h-12 items-center justify-between rounded-xl border border-foreground/15 bg-card px-4 shadow-[inset_0_1px_0_rgba(0,0,0,0.02)]"
+                    className="relative flex h-12 items-center justify-between overflow-hidden rounded-xl border border-foreground/15 bg-card px-4 shadow-[inset_0_1px_0_rgba(0,0,0,0.02)]"
                   >
-                    <span className="font-mono text-base tracking-[0.18em] text-foreground/80">
+                    <div
+                      aria-hidden
+                      className="pointer-events-none absolute inset-0 bg-[linear-gradient(110deg,transparent_40%,rgba(31,61,46,0.06)_50%,transparent_60%)] bg-[length:220%_100%]"
+                      style={{ animation: "shimmer 4.5s linear infinite" }}
+                    />
+                    <span className="relative font-mono text-base tracking-[0.18em] text-foreground/80">
                       •••• •••• •••• 4242
                     </span>
-                    <span className="inline-flex items-center rounded-md bg-[#1A1F71] px-2 py-0.5 font-display text-[10px] font-semibold uppercase tracking-[0.18em] text-white">
+                    <span className="relative inline-flex items-center rounded-md bg-[#1A1F71] px-2 py-0.5 font-display text-[10px] font-semibold uppercase tracking-[0.18em] text-white">
                       Visa
                     </span>
                   </div>
+                  <p className="mt-2 inline-flex items-center gap-1.5 text-[11px] text-foreground/55">
+                    <span className="relative flex size-1.5">
+                      <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-500/70" />
+                      <span className="relative inline-flex size-1.5 rounded-full bg-emerald-500" />
+                    </span>
+                    Encrypted with 256-bit SSL
+                  </p>
                 </Field>
               </section>
             </form>
 
             {/* Right — order summary */}
-            <aside className="md:sticky md:top-24 md:self-start">
-              <Card className="rounded-2xl bg-card p-6 shadow-sm ring-1 ring-foreground/10 md:p-7">
+            <Reveal
+              delay={0.15}
+              y={16}
+              className="md:sticky md:top-24 md:self-start"
+            >
+              <Card className="rounded-3xl bg-card p-6 shadow-md shadow-primary/5 ring-1 ring-foreground/10 md:p-7">
                 <CardContent className="flex flex-col gap-5 p-0">
                   <div>
                     <h2 className="font-display text-xl text-primary md:text-2xl">
@@ -201,15 +229,15 @@ export default function CheckoutPage() {
                     </div>
                   </div>
 
-                  <Link
+                  <MagneticCTA
                     href="/upsell-1"
                     className={cn(
                       buttonVariants({ variant: "default" }),
-                      "h-14 w-full rounded-2xl px-8 text-base font-medium shadow-md shadow-primary/10 hover:bg-primary/90 hover:shadow-lg md:h-16 md:text-lg"
+                      "pulse-glow group relative h-14 w-full rounded-2xl px-8 text-base font-medium shadow-md shadow-primary/15 hover:bg-primary/90 hover:shadow-lg md:h-16 md:text-lg"
                     )}
                   >
-                    Complete purchase
-                  </Link>
+                    <span className="relative z-10">Complete purchase</span>
+                  </MagneticCTA>
 
                   <p className="text-center text-xs text-foreground/55">
                     By completing your purchase you agree to our Terms and
@@ -217,7 +245,7 @@ export default function CheckoutPage() {
                   </p>
                 </CardContent>
               </Card>
-            </aside>
+            </Reveal>
           </div>
         </div>
       </main>
